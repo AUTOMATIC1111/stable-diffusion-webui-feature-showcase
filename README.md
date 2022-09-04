@@ -3,7 +3,7 @@ This is a feature showcase page for [Stable Diffusion web UI](https://github.com
 
 All examples are non-cherrypicked unless specified otherwise.
 
-#### Outpainting
+### Outpainting
 
 Outpainting extends original image and inpaints  created empty space.
 
@@ -133,7 +133,7 @@ Pick out of multiple sampling methods for txt2img:
 
 ![](images/sampling.png)
 
-#### Interrupt
+### Interrupt
 
 Press the Interrupt button to stop current processing.
 
@@ -150,7 +150,7 @@ unconditional denoising in a same batch.
 
 This implementation of optimization does not require any modification to original Stable Diffusion code.
 
-#### GFPGAN
+### GFPGAN
 Lets you improve faces in pictures using the GFPGAN model. There is a checkbox in every tab to use GFPGAN at 100%, and
 also a separate tab that just allows you to use GFPGAN on any picture, with a slider that controls how strong the effect is.
 
@@ -203,3 +203,13 @@ print("Seed was: " + str(processed.seed))
 
 display(processed.images, processed.seed, processed.info)
 ```
+
+### UI config
+You can change parameters for UI elements:
+ - radio groups: default selection
+ - sliders: defaul value, min, max, step 
+ 
+The file is ui-config.json in webui dir, and it is created automatically if you don't have one when the program starts.
+
+Some settings will break processing, like step not divisible by 64 for width and heght, and some, lie changing default
+function on the img2img tab, may break UI. I do not have plans to address those in near future.
