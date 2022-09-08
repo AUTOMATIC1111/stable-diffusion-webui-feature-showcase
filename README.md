@@ -147,7 +147,7 @@ Example:
 ### Sampling method selection
 Pick out of multiple sampling methods for txt2img:
 
-![](images/sampling.png)
+![](images/sampling.jpg)
 
 ### Interrupt
 
