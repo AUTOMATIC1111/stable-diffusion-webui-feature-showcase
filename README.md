@@ -30,6 +30,23 @@ In img2img tab, draw a mask over a part of image, and that part will be in-paint
 
 ![](images/inpainting.png)
 
+##### Masked content
+Masked content field determines content is placed to put into the masked regions before thet are inpainted.
+
+| mask                                            | fill                                            | original                                            | latent noise                                            | latent nothing                                            |
+|-------------------------------------------------|-------------------------------------------------|-----------------------------------------------------|---------------------------------------------------------|-----------------------------------------------------------|
+| ![](images/inpainting-initial-content-mask.png) | ![](images/inpainting-initial-content-fill.png) | ![](images/inpainting-initial-content-original.png) | ![](images/inpainting-initial-content-latent-noise.png) | ![](images/inpainting-initial-content-latent-nothing.png) |
+
+##### Inpaint at full resolution
+Normally, inpaiting resizes the image to target resolution specified in the UI. With Inpaint at full resolution
+enable, only the masked region is resized, and after processing it is pasted back to the original picture.
+This allows you to work with large pictures.
+
+##### Masking mode
+There are two options for masked mode:
+- Inpaint masked - the region under the mask is inpainted
+- Inpaint not masked - under the mask is unchanged, everything else is inpainted
+
 ### Prompt matrix
 Separate multiple prompts using the `|` character, and the system will produce an image for every combination of them.
 For example, if you use `a busy city street in a modern city|illustration|cinematic lighting` prompt, there are four combinations possible (first part of prompt is always kept):
@@ -47,9 +64,8 @@ Another example, this time with 5 prompts and 16 variations:
 
 You can find the feature at the bottom, under Script -> Prompt matrix.
 
-
 ### Stable Diffusion upscale
-Upscale image using RealESRGAN and then go through tiles of the result, improving them with img2img.
+Upscale image using RealESRGAN/ESRGAN and then go through tiles of the result, improving them with img2img.
 Also has an let you do the upscaling part yourself in external program, and just go through tiles with img2img.
 
 Original idea by: https://github.com/jquesnelle/txt2imghd. This is an independent implementation.
@@ -150,11 +166,15 @@ unconditional denoising in a same batch.
 
 This implementation of optimization does not require any modification to original Stable Diffusion code.
 
-### GFPGAN
-Lets you improve faces in pictures using the GFPGAN model. There is a checkbox in every tab to use GFPGAN at 100%, and
-also a separate tab that just allows you to use GFPGAN on any picture, with a slider that controls how strong the effect is.
+### Face restoration
+Lets you improve faces in pictures using either GFPGAN or CodeFormer. There is a checkbox in every tab to use face restoration,
+and also a separate tab that just allows you to use face restoration on any picture, with a slider that controls how visible
+the effect is. You can choose between the two methods in settings.
 
-![](images/GFPGAN.png)
+| Original                | GFPGAN                         | CodeFormer                         |
+|-------------------------|--------------------------------|------------------------------------|
+| ![](images/facefix.png) | ![](images/facefix-gfpgan.png) | ![](images/facefix-codeformer.png) |
+
 
 ### Saving
 Click the Save button under the output section, and generated images will be saved to a directory specified in settings;
@@ -213,3 +233,11 @@ The file is ui-config.json in webui dir, and it is created automatically if you 
 
 Some settings will break processing, like step not divisible by 64 for width and heght, and some, lie changing default
 function on the img2img tab, may break UI. I do not have plans to address those in near future.
+
+### ESRGAN
+It's possible to use ESRGAN models on the Extras tab, as well as in SD upscale.
+
+To use ESRGAN models, put them into ESRGAN directory in the same location as webui.py.
+A file will be loaded as model if it has .pth extension. Grab models from the [Model Database](https://upscale.wiki/wiki/Model_Database).
+
+Not all models from the database are supported. All 2x models are most likely not supported.
