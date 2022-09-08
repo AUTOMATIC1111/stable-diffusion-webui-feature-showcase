@@ -39,8 +39,15 @@ Masked content field determines content is placed to put into the masked regions
 
 ##### Inpaint at full resolution
 Normally, inpaiting resizes the image to target resolution specified in the UI. With Inpaint at full resolution
-enable, only the masked region is resized, and after processing it is pasted back to the original picture.
-This allows you to work with large pictures.
+enabled, only the masked region is resized, and after processing it is pasted back to the original picture.
+This allows you to work with large pictures, and allows to render the inpained object at a much larger resolution.
+
+
+| Input                               | Inpaint normal                   | Inpaint at whole resolution       |
+|-------------------------------------|----------------------------------|-----------------------------------|
+| ![](images/inpaint-whole-mask.png)  | ![](images/inpaint-whole-no.png) | ![](images/inpaint-whole-yes.png) |
+
+
 
 ##### Masking mode
 There are two options for masked mode:
