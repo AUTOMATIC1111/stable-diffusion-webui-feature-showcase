@@ -47,6 +47,13 @@ There are two options for masked mode:
 - Inpaint masked - the region under the mask is inpainted
 - Inpaint not masked - under the mask is unchanged, everything else is inpainted
 
+##### Alpha mask
+
+| Input                        | Output                        |
+|------------------------------|-------------------------------|
+| ![](images/inpaint-mask.png) | ![](images/inpaint-mask2.png) |
+
+
 ### Prompt matrix
 Separate multiple prompts using the `|` character, and the system will produce an image for every combination of them.
 For example, if you use `a busy city street in a modern city|illustration|cinematic lighting` prompt, there are four combinations possible (first part of prompt is always kept):
