@@ -163,6 +163,36 @@ Pick out of multiple sampling methods for txt2img:
 
 ![](images/sampling.jpg)
 
+### Seed resize
+This function allows you to generate images from known seeds at different resolutions. Normally, when you change resolution,
+the image changes entirely, even if you keep all other parameters including seed. With seed resizing you specify which resolution
+you want to use when generating seeded noise for the model, and the model will very likely produce something looking very similar
+to the original picture. In the example below, the leftmost picture is 512x512, and others are produced with exact same parameters
+but with larger vertical resolution.
+
+| Info                      | Image                         |
+|---------------------------|-------------------------------|
+| Seed resize not enabled   | ![](images/seed-noresize.png) |
+| Seed resized from 512x512 | ![](images/seed-resize.png)   |
+
+Ancestral samplers are a little worse at this than the rest.
+
+You can find this ferature by clicking the "Extra" checkbox near the seed.
+
+### Variations
+A Variation strength slider and Variation seed field allow you to specify how much the existing picture should be altered to look
+like a different one. At maximum strength you will get picture with Variation seed, at minimum -  picture with original Seed (except
+for when using ancestral samplers).
+
+![](images/seed-variations.jpg)
+
+You can find this ferature by clicking the "Extra" checkbox near the seed.
+
+### Styles
+Press "Save prompt as style" button to write your current prompt to styles.csv, the file with collection of styles. A dropbox to
+the right of the prompt will allow you to choose any style out of previously saved, and automatically append it to your input.
+To delete style, manually delete it from styles.csv and restart the program.
+
 ### Interrupt
 
 Press the Interrupt button to stop current processing.
