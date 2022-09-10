@@ -193,6 +193,15 @@ Press "Save prompt as style" button to write your current prompt to styles.csv, 
 the right of the prompt will allow you to choose any style out of previously saved, and automatically append it to your input.
 To delete style, manually delete it from styles.csv and restart the program.
 
+### Negative prompt
+
+Allows you to use another prompt of things the model should avoid when generating the picture. This works by using the
+negative prompt for unconditional conditioning in the sampling process instead of empty string.
+
+| Original                      | Negative: purple                | Negative: tentacles                |
+|-------------------------------|---------------------------------|------------------------------------|
+| ![](images/negative-base.png) | ![](images/negative-purple.png) | ![](images/negative-tentacles.png) |
+
 ### Interrupt
 
 Press the Interrupt button to stop current processing.
