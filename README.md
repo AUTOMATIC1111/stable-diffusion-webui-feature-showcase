@@ -216,7 +216,7 @@ Originally by: https://github.com/pharmapsychotic/clip-interrogator
 CLIP interrogator allows you to retrieve prompt from an image. The prompt won't allow you to reproduce this
 exact image (and sometimes it won't even be close), but it can be a good start.
 
-![](images/CLIP interrogate.png)
+![](images/CLIP-interrogate.png)
 
 The first time you run CLIP interrogator it will download few gigabytes of models.
 
