@@ -172,10 +172,10 @@ Pick out of multiple sampling methods for txt2img:
 
 ### Seed resize
 This function allows you to generate images from known seeds at different resolutions. Normally, when you change resolution,
-the image changes entirely, even if you keep all other parameters including seed. With seed resizing you specify which resolution
-you want to use when generating seeded noise for the model, and the model will very likely produce something looking very similar
-to the original picture. In the example below, the leftmost picture is 512x512, and others are produced with exact same parameters
-but with larger vertical resolution.
+the image changes entirely, even if you keep all other parameters including seed. With seed resizing you specify the resolution
+of the original image, and the model will very likely produce something looking very similar to it, even at a different resolution.
+In the example below, the leftmost picture is 512x512, and others are produced with exact same parameters but with larger vertical
+resolution.
 
 | Info                      | Image                         |
 |---------------------------|-------------------------------|
