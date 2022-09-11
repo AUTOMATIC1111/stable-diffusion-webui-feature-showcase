@@ -220,24 +220,25 @@ exact image (and sometimes it won't even be close), but it can be a good start.
 
 The first time you run CLIP interrogator it will download few gigabytes of models.
 
-By default, CLIP interrogator will only generate a general description and an artist (from `artists.csv`).
-You can add more info for it to generate by doing the follwoing:
+CLIP interrogator has two parts: one is a BLIP model that creates a text description from the picture.
+Other is a CLIP model that will pick few lines relevant to the picture out of a list. By defaul, there
+is only one list - a list of artists (from `artists.csv`). You can add more lists by doing the follwoing:
 
  - create `interrogate` directory in same place as web ui
- - put text files in it with relevant description on each line
+ - put text files in it with a relevant description on each line
 
 For example of what text files to use, see https://github.com/pharmapsychotic/clip-interrogator/tree/main/data.
 In fact, you can just take files from there and use them - just skip artists.txt because you already have a list of
 artists in `artists.csv` (or use that too, who's going to stop you). Each file adds one line of text to final description.
-If you add ".top3." to filename, for example, `flavors.top3.txt`, three lines most relevant lines from this file will be
+If you add ".top3." to filename, for example, `flavors.top3.txt`, three most relevant lines from this file will be
 added to the prompt (other numbers also work).
 
 There are settings relevant to this feature:
  - `Interrogate: keep models in VRAM` - do not unload Interrogate models from memory after using them. For users with a lot of VRAM.
- - `Interrogate: use artists from artists.csv` - adds artist from `artists.csv` when interrogating. Can be useful disable when you 
-have your list of artists in `interrogate` directory
-
-
+ - `Interrogate: use artists from artists.csv` - adds artist from `artists.csv` when interrogating. Can be useful disable when you have your list of artists in `interrogate` directory
+ - `Interrogate: num_beams for BLIP` - parameter that affects how detailed descriptions from BLIP model are (the first part of generated prompt)
+ - `Interrogate: minimum descripton length` - minimum length for BLIP model's text
+ - `Interrogate: maximum descripton length` - maximum length for BLIP model's text
 
 ### Interrupt
 
