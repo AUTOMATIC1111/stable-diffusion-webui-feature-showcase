@@ -30,7 +30,10 @@ In img2img tab, draw a mask over a part of image, and that part will be in-paint
 
 ![](images/inpainting.png)
 
-You can also add a mask by using an image with transparency. Any even slightly transparent areas will become part of the mask. Be aware that [some editors](https://docs.krita.org/en/reference_manual/layers_and_masks/split_alpha.html#how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas) save completely transparent areas as black by default.
+Options for inpainting:
+- draw a mask yourself in web editor
+- erase a part of picture in external editor and upload a transparent picture. Any even slightly transparent areas will become part of the mask. Be aware that [some editors](https://docs.krita.org/en/reference_manual/layers_and_masks/split_alpha.html#how-to-save-a-png-texture-and-keep-color-values-in-fully-transparent-areas) save completely transparent areas as black by default.
+- change mode (to the bottom right of the picture) to "Upload mask" and choose a separate black and while image for mask (white=inpaint).
 
 ##### Masked content
 Masked content field determines content is placed to put into the masked regions before thet are inpainted.
