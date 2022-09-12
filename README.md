@@ -221,7 +221,7 @@ exact image (and sometimes it won't even be close), but it can be a good start.
 The first time you run CLIP interrogator it will download few gigabytes of models.
 
 CLIP interrogator has two parts: one is a BLIP model that creates a text description from the picture.
-Other is a CLIP model that will pick few lines relevant to the picture out of a list. By defaul, there
+Other is a CLIP model that will pick few lines relevant to the picture out of a list. By default, there
 is only one list - a list of artists (from `artists.csv`). You can add more lists by doing the follwoing:
 
  - create `interrogate` directory in same place as web ui
@@ -239,6 +239,7 @@ There are settings relevant to this feature:
  - `Interrogate: num_beams for BLIP` - parameter that affects how detailed descriptions from BLIP model are (the first part of generated prompt)
  - `Interrogate: minimum descripton length` - minimum length for BLIP model's text
  - `Interrogate: maximum descripton length` - maximum length for BLIP model's text
+ - `Interrogate: maximum number of lines in text file` - interrogator will only consider this many first lines in a file. Set to 0, default is 1500, which is about as much as a 4GB videocard can handle.
 
 ### Interrupt
 
