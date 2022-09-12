@@ -128,7 +128,7 @@ Original image by Anonymous user from 4chan. Thank you, Anonymous user.
 ### X/Y plot
 Creates a grid of images with varying parameters. Select which parameters should be shared by rows and columns using
 X type and Y type fields, and input those parameters separated by comma into X values/Y values fields. For integer,
-and floating ponit numbers, ranges are supported. Examples:
+and floating point numbers, ranges are supported. Examples:
 
 - `1-5` = 1, 2, 3, 4, 5
 - `1-5 (+2)` = 1, 3, 5
