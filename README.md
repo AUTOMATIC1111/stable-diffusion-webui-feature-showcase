@@ -187,7 +187,7 @@ resolution.
 
 Ancestral samplers are a little worse at this than the rest.
 
-You can find this ferature by clicking the "Extra" checkbox near the seed.
+You can find this feature by clicking the "Extra" checkbox near the seed.
 
 ### Variations
 A Variation strength slider and Variation seed field allow you to specify how much the existing picture should be altered to look
