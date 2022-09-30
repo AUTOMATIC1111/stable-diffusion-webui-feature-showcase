@@ -9,7 +9,7 @@ Outpainting extends original image and inpaints  created empty space.
 
 Example:
 
-| Original                     | Oupainting                   | Outpainting again            |
+| Original                     | Outpainting                  | Outpainting again            |
 |------------------------------|------------------------------|------------------------------|
 | ![](images/outpainting-1.png) | ![](images/outpainting-2.png) | ![](images/outpainting-3.png) |
 
@@ -43,9 +43,9 @@ Masked content field determines content is placed to put into the masked regions
 | ![](images/inpainting-initial-content-mask.png) | ![](images/inpainting-initial-content-fill.png) | ![](images/inpainting-initial-content-original.png) | ![](images/inpainting-initial-content-latent-noise.png) | ![](images/inpainting-initial-content-latent-nothing.png) |
 
 ##### Inpaint at full resolution
-Normally, inpaiting resizes the image to target resolution specified in the UI. With Inpaint at full resolution
+Normally, inpainting resizes the image to target resolution specified in the UI. With Inpaint at full resolution
 enabled, only the masked region is resized, and after processing it is pasted back to the original picture.
-This allows you to work with large pictures, and allows to render the inpained object at a much larger resolution.
+This allows you to work with large pictures, and allows to render the inpainted object at a much larger resolution.
 
 
 | Input                               | Inpaint normal                   | Inpaint at whole resolution       |
