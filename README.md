@@ -243,6 +243,28 @@ There are settings relevant to this feature:
  - `Interrogate: minimum descripton length` - minimum length for BLIP model's text
  - `Interrogate: maximum descripton length` - maximum length for BLIP model's text
  - `Interrogate: maximum number of lines in text file` - interrogator will only consider this many first lines in a file. Set to 0, default is 1500, which is about as much as a 4GB videocard can handle.
+ 
+### DeepDanbooru interrogator
+
+Originally by: https://github.com/KichangKim/DeepDanbooru
+
+The interrogator allows you to retrieve prompt from an anime picture in a format of Deepbooru tags. Usefull with diffusion models finetuned for anime.
+![](images/deepbooru.png)
+
+The first time you run DeepDanbooru interrogator it will download around half a gigabyte model.
+To enable it you need to edit `webui-user.bat` and add `--deepdanbooru` to `COMMANDLINE_ARGS` example:
+```
+@echo off
+
+set PYTHON=
+set GIT=
+set VENV_DIR=
+set COMMANDLINE_ARGS=--deepdanbooru
+
+call webui.bat
+```
+
+
 
 ### Interrupt
 
