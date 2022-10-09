@@ -18,7 +18,7 @@ Original image by Anonymous user from 4chan. Thank you, Anonymous user.
 You can find the feature in the img2img tab at the bottom, under Script -> Poor man's outpainting.
 
 Outpainting, unlike normal image generation, seems to profit very much from large step count. A recipe for a good outpainting
-is a good prompt that matches the picture, sliders for denoising and FCG scale set to max, and step count of 50 to 100 with
+is a good prompt that matches the picture, sliders for denoising and CFG scale set to max, and step count of 50 to 100 with
 euler ancestral or DPM2 ancestral samplers.
 
 | 81 steps, Euler A                   | 30 steps, Euler A                     | 10 steps, Euler A                    | 80 steps, Euler A                   |
